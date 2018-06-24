@@ -9,13 +9,16 @@
                 </ul>
             </div>
             <div class="topFooter__socialBlock">
-                <a href="#" class="topFooter__socialBlock--link"><img src=""></a>
+                <a href="#" class="topFooter__socialBlock--link"><img src="assets/images/fb_red.svg"></a>
             </div>
             <div class="topFooter__getNewsBlock">
                 <p class="topFooter__getNewsBlock--name">Get latest news</p>
                 <form class="getLastestNews" id="getLastestNews">
                     <div class="getLastestNews__holder">
-                        <input type="text" name="email" id="getLatestNewsEmail" class="getLastestNews__holder--email" placeholder="Your email here">
+                        <input type="text" name="email" id="getLatestNewsEmail" class="getLastestNews__holder--email getLatestNewsEmail" placeholder="Your email here">
+                        <div class="invalid-feedback">
+                            Enter a valid email
+                        </div>
                         <input type="submit" value="Subscribe" id="getLatestNewsSubmit" class="getLastestNews__holder--submit">
                     </div>
                 </form>

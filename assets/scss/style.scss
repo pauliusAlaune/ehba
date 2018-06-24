@@ -23,11 +23,14 @@ body {
     position: relative;
     background-color: #090c30;
     .topFooter {
-        padding: 79px 64px 38.5px;
+        padding: 27px 64px 19.5px;
         display: flex;
         width: 100%;
         &__menuBlock {
-            width: 40%;
+            width: 34%;
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 14px;
             &__listHolder {
                 display: flex;
                 &--item {
@@ -61,10 +64,17 @@ body {
             }
         }
         &__socialBlock {
-            width: 28.826%;
+            width: 34.826%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            &--link {
+                margin-right: 8.5%;
+            }
         }
         &__getNewsBlock {
             width: 31.174%;
+            margin-bottom: 5px;
             &--name {
                 font-family: $fname;
                 font-size: 16px;
@@ -75,6 +85,7 @@ body {
                 letter-spacing: 1.1px;
                 text-align: left;
                 color: #fafafa;
+                margin-bottom: 11px;
             }
         }
     }
@@ -116,6 +127,7 @@ body {
     &__holder {
         display: flex;
         width: 100%;
+        position: relative;
         &--email {
             width: 66.26%;
             font-family: $fname;
@@ -129,12 +141,53 @@ body {
             color: #8c8ba5;
             padding: 14px 15px 13px;
             height: 45px;
-            border-radius: 10px 0 0 10px ;
+            border-radius: 10px 0 0 10px;
             background-color: #1a1c3b;
-            border: solid 1px #2b2e52
+            border: solid 1px #2b2e52;
+            &:focus {
+                outline: none;    
+            }
         }
         &--submit {
             width: 33.74%;
+            font-family: $fname;
+            font-size: 14px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 1.2px;
+            text-align: center;
+            color: #ee5744;
+            height: 45px;
+            border-radius: 0 10px 10px 0;
+            background-color: rgba(238, 87, 68, 0.13);
+            border: solid 2px #ee5744;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            &:hover {
+                background-color: rgba(238, 87, 68, 1);
+                color: #fff;
+            }
+        }
+        .invalid-feedback {
+            position: absolute;
+            left: 15px;
+            bottom: -18px;
+            font-family: $fname;
+            font-size: 12px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 1.2px;
+            text-align: center;
+            color: #ee5744;
+            display: none;
         }
     }
+}
+
+.getLastestNews__holder.err .invalid-feedback {
+    display: block;
 }
