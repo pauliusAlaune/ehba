@@ -3,7 +3,7 @@
 
 
 body {
-    background-color: #090c30;
+    background-color: #014;
     font-family: 'Source Sans Pro', sans-serif;
 }
 .testTitle {
@@ -15,4 +15,126 @@ body {
     letter-spacing: 3.7px;
     text-align: left;
     color: #ffffff;
+}
+
+
+// FOOTER
+.footer {
+    position: relative;
+    background-color: #090c30;
+    .topFooter {
+        padding: 79px 64px 38.5px;
+        display: flex;
+        width: 100%;
+        &__menuBlock {
+            width: 40%;
+            &__listHolder {
+                display: flex;
+                &--item {
+                    font-family: $fname;
+                    font-size: 14px;
+                    font-weight: bold;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: 0.9px;
+                    text-align: left;
+                    color: #ffffff;
+                    a {
+                        padding: 0 10px;
+                        margin: 0 34px;
+                    }
+                    &:first-child {
+                        a {
+                            padding-left: 0px;
+                            margin-left: 0px;
+                        }
+                    }
+                    &:last-child {
+                        a{
+                           padding-right: 0px;
+                            margin-right: 0px; 
+                        }
+                        
+                    }
+                }
+            }
+        }
+        &__socialBlock {
+            width: 28.826%;
+        }
+        &__getNewsBlock {
+            width: 31.174%;
+            &--name {
+                font-family: $fname;
+                font-size: 16px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: 1.1px;
+                text-align: left;
+                color: #fafafa;
+            }
+        }
+    }
+    .bottomFooter {
+        border-top: solid 2px #1a1c3b;
+        padding: 35.5px 64px 41px;
+        display: flex;
+        justify-content: space-between;
+        &__leftBlock {
+            &--copyRight {
+                font-family: $fname;
+                font-size: 12px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: 0.8px;
+                text-align: left;
+                color: #fafafa;
+            }
+        }
+        &__rightBlock {
+            &--madeBy {
+                font-family: $fname;
+                font-size: 12px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: 0.8px;
+                text-align: left;
+                color: #fafafa;
+            }
+        }
+    }
+}
+// FOOTER FORM
+.getLastestNews {
+    &__holder {
+        display: flex;
+        width: 100%;
+        &--email {
+            width: 66.26%;
+            font-family: $fname;
+            font-size: 14px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 0.7px;
+            text-align: left;
+            color: #8c8ba5;
+            padding: 14px 15px 13px;
+            height: 45px;
+            border-radius: 10px 0 0 10px ;
+            background-color: #1a1c3b;
+            border: solid 1px #2b2e52
+        }
+        &--submit {
+            width: 33.74%;
+        }
+    }
 }
