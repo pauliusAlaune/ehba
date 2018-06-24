@@ -3,10 +3,11 @@ $(document).ready(function() {
     spanHover.classList.add('hoverFx');
     $('.hoverItem').hover(function(){        
         $(this).append(spanHover);
+        $(this).mouseleave(function(){
+            spanHover.remove();
+        });
     });
-    $('.hoverItem').mouseleave(function(){
-        $(this).remove(spanHover);
-    });
+
     
     // get Lastest News validation
     const getLastestNews = document.getElementById('getLastestNews');

@@ -1,6 +1,12 @@
 <?php include './includes/header.php'; ?>
 
-<h1 class="testTitle">What is EHBA 
-and Bike Polo</h1>
+<section class="introSecton">
+    <div class="intro__bgHolder">
+        <div class="intro__bgHolder--image"></div>
+    </div>
+    <div class="intro__holder">
+        <h1 class="intro__holder--title">What is EHBA and Bike Polo</h1>
+    </div>
+</section>
 
 <?php include './includes/footer.php'; ?>
