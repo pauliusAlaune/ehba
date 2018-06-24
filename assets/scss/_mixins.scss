@@ -1,0 +1,25 @@
+@mixin responsive($pixels){
+	@media screen and (max-width:$pixels){
+		@content;
+	}
+}
+
+@mixin mfresponsive($pixels){
+	@media screen and (min-width:$pixels){
+		@content;
+	}
+}
+
+@mixin bgCover
+{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+@mixin bgContain
+{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
