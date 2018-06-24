@@ -7,7 +7,12 @@ $(document).ready(function() {
             spanHover.remove();
         });
     });
-
+    
+    const navToggle = document.getElementById('navToggle');
+    navToggle.addEventListener('click', function(){
+        const navBlock = document.querySelector('.navBlock');
+        navBlock.classList.toggle('active');
+    });
     
     // get Lastest News validation
     const getLastestNews = document.getElementById('getLastestNews');
@@ -31,6 +36,10 @@ $(document).ready(function() {
         if(!re.test(email.value)){
             email.classList.add('is-invalid'); 
             block.classList.add('err');
+            block.classList.add('animated', 'shake');
+            setTimeout(function(){
+                block.classList.remove('animated', 'shake');
+            }, 1500);
             validEmail = false;
         } else {
             email.classList.remove('is-invalid');

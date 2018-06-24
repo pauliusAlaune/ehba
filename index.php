@@ -6,6 +6,7 @@
     </div>
     <div class="intro__holder">
         <h1 class="intro__holder--title">What is EHBA and Bike Polo</h1>
+        <a class="intro__holder--btn">READ</a>
     </div>
 </section>
 
