@@ -17,6 +17,58 @@ body {
     color: #ffffff;
 }
 
+// HEADER
+.header {
+    position: relative;
+    padding: 15px 9.375% 0;
+    &__holder {
+        width: 100%;
+        display: flex;
+        &__leftBlock {
+            width: 40%;
+            padding-right: 8.5%;
+            padding-top: 16px;
+            &__listholder {
+                display: flex;
+                justify-content: space-between;
+                &--item {
+                    position: relative;
+                    font-family: $fname;
+                    font-size: 16px;
+                    font-weight: bold;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: 1.1px;
+                    text-align: left;
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    .hoverFx {
+                        background-image: url(../images/headerHover.svg);
+                        position: absolute;
+                        left: -26px;
+                        width: 18px;
+                        height: 18px;
+                        animation: mymove 4s linear infinite;
+                        
+                    }
+                    @keyframes mymove {
+                        from {transform: rotate(0deg)}
+                        to {transform: rotate(360deg)}
+                    }
+                }
+            }
+        }
+        &__centerBlock {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+        }
+        &__rightBlock {
+            width: 40%;
+        }
+    }
+}
 
 // FOOTER
 .footer {
