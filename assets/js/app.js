@@ -47,5 +47,10 @@ $(document).ready(function() {
         }
         return validEmail;
     }
+    
+    $('.catListHolder__item').click(function(){
+        $('.catListHolder__item').removeClass('active');
+        $(this).addClass('active');
+    });
 
 });
