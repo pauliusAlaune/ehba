@@ -52,7 +52,8 @@ body {
                     color: #ffffff;
                     text-transform: uppercase;
                     .hoverFx {
-                        background-image: url(../images/headerHover.svg);
+//                        background-image: url(../images/headerHover.svg);
+                        background-image: url(../images/Shape.svg);
                         position: absolute;
                         left: -26px;
                         width: 18px;
@@ -91,7 +92,8 @@ body {
                 color: #ffffff;
                 text-transform: uppercase;
                 .hoverFx {
-                    background-image: url(../images/headerHover.svg);
+//                    background-image: url(../images/headerHover.svg);
+                    background-image: url(../images/Shape.svg);
                     position: absolute;
                     left: -26px;
                     width: 18px;
@@ -163,19 +165,6 @@ body {
                     }
                 }
             }
-//            li {
-//                position: relative;
-//                font-family: $fname;
-//                font-size: 16px;
-//                font-weight: bold;
-//                font-style: normal;
-//                font-stretch: normal;
-//                line-height: normal;
-//                letter-spacing: 1.1px;
-//                text-align: left;
-//                color: #ffffff;
-//                text-transform: uppercase;  
-//            }
         }
     }
     .navBlock.active {
@@ -200,9 +189,6 @@ body {
         z-index: 0;
     }
     .intro__holder {
-//        display: flex;
-//        justify-content: center;
-//        align-items: center;
         padding: 16% 20.236%;
         height: 100%;
         display: flex;
@@ -247,11 +233,615 @@ body {
         }
     }
 }
+.introNewsSection {
+    background-color: $blue;
+    width: 100%;
+    height: 100%;
+    padding-top: 71px;
+    padding-bottom: 108px;
+    &__titleHolder {
+        padding: 0 9.375%;
+        &--mainTitle {
+            font-family: $fname;
+            font-size: 40px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 1px;
+            text-align: left;
+            color: #ffffff;
+            margin-bottom: 2px;
+        }
+        &--subTitle {
+            font-family: $fname;
+            font-size: 20px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.3;
+            letter-spacing: 1px;
+            text-align: left;
+            color: #ffffff;
+        }
+    }
+    &__holder {
+        width: 100%;
+        padding: 35px 9.375% 0;
+        display: flex;
+        &__leftBlock {
+            width: 50%;
+            padding-right: 15px;
+            &--link {
+                cursor: pointer;
+                transition: all 0.5s ease;
+                &:hover {
+                    .leftBlockLink__block {
+                        &--imgBlock {
+                            .overlay {
+                                background-color: rgba(9,12,48, 0.7);
+                            }
+                        }
+                        &--textBlock { 
+                            border: solid 2px #ee5744;
+                            .para {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+                .leftBlockLink__block {
+                    width: 100%;
+                    height: 555px;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    position: relative;
+                    &--imgBlock {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        overflow: hidden;
+                        z-index: 1;
+                        img {
+                            width: 100%;
+                            height: auto;
+                            position: absolute; 
+                            top:0; 
+                            left: 0; 
+                            right: 0;
+                            z-index: 10;
+                            @include responsive(1460px)
+                            {
+                                width: auto;
+                                height: 100%;
+                            }
+                        }
+                        .overlay {
+                            background-color: rgba(9,12,48, 0.5);
+                            position: absolute; 
+                            bottom: 0; 
+                            left: 0px;
+                            z-index: 20;
+                            width: 100%;
+                            height: 100%;
+                            transition: all 0.5s ease;
+                        }
+                    }
+                    &--textBlock {
+                        width: 90%;
+                        height: 90%;
+                        margin: auto;
+                        border-radius: 10px;
+//                        border: solid 2px #ee5744;
+                        padding: 30px 40px;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        z-index: 20;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        justify-content: center;
+                        transition: all 0.5s ease;
+                        .title {
+                            font-family: $fname;
+                            font-size: 30px;
+                            font-weight: 600;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: normal;
+                            letter-spacing: 1.5px;
+                            text-align: center;
+                            color: #ffffff;
+                            margin-bottom: 10px;
+                        }
+                        .para {
+                            font-family: $fname;
+                            font-size: 16px;
+                            font-weight: normal;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: normal;
+                            letter-spacing: 1.1px;
+                            text-align: center;
+                            color: #ffffff;
+                            opacity: 0;
+                            transition: all 0.5s ease;
+                        }
+                    }
+                }
+            }
+        }
+        &__rightBlock {
+            width: 50%;
+            padding-left: 15px;
+            &__twoBlockHolder {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                &__block {
+                    width: 100%;
+                    &--link {
+                        cursor: pointer;
+                        transition: all 0.5s ease;
+                        &:hover {
+                            .rightBlockLink__block {
+                                &--imgBlock {
+                                    .overlay {
+                                        background-color: rgba(9,12,48, 0.7);
+                                    }
+                                }
+                                &--textBlock { 
+                                    border: solid 2px #ee5744;
+                                    .para {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                        .rightBlockLink__block {
+                            width: 100%;
+                            height: 263px;
+                            overflow: hidden;
+                            border-radius: 10px;
+                            position: relative;
+                            &--imgBlock {
+                                width: 100%;
+                                height: 100%;
+                                position: relative;
+                                z-index: 1;
+                                img {
+                                    width: 100%;
+                                    height: auto;
+                                    position: absolute; 
+                                    top:0; 
+                                    left: 0; 
+                                    right: 0;
+                                    z-index: 10;
+                                    @include responsive(1460px)
+                                    {
+                                        width: auto;
+                                        height: 100%;
+                                    }
+                                }
+                                .overlay {
+                                    background-color: rgba(9,12,48, 0.5);
+                                    position: absolute; 
+                                    bottom: 0; 
+                                    left: 0px;
+                                    z-index: 20;
+                                    width: 100%;
+                                    height: 100%;
+                                    transition: all 0.5s ease;
+                                }
+                            }
+                            &--textBlock {
+                                width: 90%;
+                                height: 90%;
+                                margin: auto;
+                                border-radius: 10px;
+        //                        border: solid 2px #ee5744;
+                                padding: 30px 40px;
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                top: 0;
+                                bottom: 0;
+                                z-index: 20;
+                                display: flex;
+                                align-items: center;
+                                flex-direction: column;
+                                justify-content: center;
+                                transition: all 0.5s ease;
+                                .title {
+                                    font-family: $fname;
+                                    font-size: 22px;
+                                    font-weight: 600;
+                                    font-style: normal;
+                                    font-stretch: normal;
+                                    line-height: normal;
+                                    letter-spacing: 1.5px;
+                                    text-align: center;
+                                    color: #ffffff;
+                                    margin-bottom: 10px;
+                                }
+                                .para {
+                                    font-family: $fname;
+                                    font-size: 16px;
+                                    font-weight: normal;
+                                    font-style: normal;
+                                    font-stretch: normal;
+                                    line-height: normal;
+                                    letter-spacing: 1.1px;
+                                    text-align: center;
+                                    color: #ffffff;
+                                    opacity: 0;
+                                    transition: all 0.5s ease;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__linkHolder {
+        width: 100%;
+        padding: 50px 9.375% 0;
+        color: #fff;
+        &--link {
+            font-family: $fname;
+            font-size: 18px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 1.2px;
+            color: #fff;
+            text-align: left;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #fff;
+            transition: all 0.5s ease;
+            &:hover {
+                color: #ee5744;
+                border-bottom: 2px solid #ee5744;
+            }
+        }
+    }
+}
+
+
+.introEventsSection {
+    background-color: $blue;
+    width: 100%;
+    height: 100%;
+    padding-top: 71px;
+    padding-bottom: 108px;
+    &__titleHolder {
+        padding: 0 9.375% 63px;
+        &--mainTitle {
+            font-family: $fname;
+            font-size: 40px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 1px;
+            text-align: left;
+            color: #ffffff;
+            margin-bottom: 2px;
+        }
+        &--subTitle {
+            font-family: $fname;
+            font-size: 20px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.3;
+            letter-spacing: 1px;
+            text-align: left;
+            color: #ffffff;
+        }
+    }
+    &__holder {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 9.375% 39px;
+        &__block {
+            width: 50%;
+            padding-bottom: 30px;
+            height: 212px;
+            &:nth-child(even){
+                padding-left: 15px;
+            }
+            &:nth-child(odd){
+                padding-right: 15px;
+            }
+            &:hover {
+                .introEventsSection__holder__block__inner {
+                    .introEventsSection__holder__block__inner__leftBlock {
+                        .overlay {
+                            opacity: 1;
+                        }
+                        .hoverBorder {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            &__inner {
+                width: 100%;
+                height: 100%;
+                background-color: #0f1234;
+                display: flex;
+                border-radius: 10px;
+                &__leftBlock {
+                    position: relative;
+                    width: 50%;
+                    img {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px 0 0 10px;
+                    }
+                    .overlay {
+                        background-color: rgba(9,12,48, 0.5);
+                        position: absolute; 
+                        bottom: 0; 
+                        left: 0px;
+                        z-index: 20;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px 0 0 10px;
+                        opacity: 0;
+                        transition: all 0.5s ease;
+                    }
+                    .hoverBorder {
+                        width: 90%;
+                        height: 90%;
+                        border: solid 2px #ee5744;
+                        position: absolute; 
+                        bottom: 0; 
+                        left: 0px;
+                        right: 0px;
+                        top: 0px;
+                        z-index: 20;
+                        margin: auto;
+                        border-radius: 10px;
+                        opacity: 0;
+                        transition: all 0.5s ease;
+                    }
+                }
+                &__rightBlock {
+                    position: relative;
+                    width: 50%;
+                    padding: 18px 14px 10px;
+                    display: flex;
+                    flex-direction: column;
+                    .nameDateBlock {
+                        .title {
+                            font-family: $fname;
+                            font-size: 20px;
+                            font-weight: 600;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 1.1;
+                            letter-spacing: 1.6px;
+                            text-align: left;
+                            color: #ffffff;
+                            margin-bottom: 24px;
+                        }
+                        .date {
+                            font-family: $fname;
+                            font-size: 14px;
+                            font-weight: normal;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: normal;
+                            letter-spacing: 1.2px;
+                            text-align: left;
+                            color: #ffffff;
+                        }
+                    }
+                    .placeBlock {
+                        margin-top: auto;
+                        display: flex;
+                        .place {
+                            display: flex;
+                            margin-right: 40px;
+                            img {
+                                margin-right: 7px;
+                            }
+                            .name {
+                                font-family: $fname;
+                                font-size: 14px;
+                                font-weight: normal;
+                                font-style: normal;
+                                font-stretch: normal;
+                                line-height: normal;
+                                letter-spacing: 1.2px;
+                                text-align: left;
+                                color: #ffffff;
+                            }
+                        }
+                        .sort {
+                            display: flex;
+                            img {
+                                margin-right: 7px;
+                            }
+                            .name {
+                                font-family: $fname;
+                                font-size: 14px;
+                                font-weight: normal;
+                                font-style: normal;
+                                font-stretch: normal;
+                                line-height: normal;
+                                letter-spacing: 1.2px;
+                                text-align: left;
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__linkHolder {
+        width: 100%;
+        padding: 50px 9.375% 0;
+        color: #fff;
+        &--link {
+            font-family: $fname;
+            font-size: 18px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 1.2px;
+            color: #fff;
+            text-align: left;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #fff;
+            transition: all 0.5s ease;
+            margin-right: 56px;
+            &:hover {
+                color: #ee5744;
+                border-bottom: 2px solid #ee5744;
+            }
+        }
+    }
+}
+
+.introWhatIsSection {
+    background-color: $blue;
+    width: 100%;
+    height: 100%;
+    padding-top: 71px;
+    padding-bottom: 108px;
+    &__holder {
+        width: 100%;
+        display: flex;
+        &__leftBlock {
+            width: 50%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__rightBlock {
+            width: 50%;
+            padding: 14px 14.236% 0 8.125%;
+            .title {
+                font-family: $fname;
+                font-size: 40px;
+                font-weight: 900;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: 1px;
+                text-align: left;
+                color: #ffffff;
+                position: relative;
+            }
+            .deco {
+                width: 114px;
+                height: 3px;
+                background-color: #ee5744;
+                margin-bottom: 25px;
+            }
+            .para {
+                font-family: $fname;
+                font-size: 16px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.63;
+                letter-spacing: 0.8px;
+                text-align: left;
+                color: #ffffff;
+            }
+            .link {
+                font-family: $fname;
+                font-size: 18px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: 1.2px;
+                color: #fff;
+                text-align: left;
+                padding-bottom: 5px;
+                border-bottom: 2px solid #fff;
+                transition: all 0.5s ease;
+                margin-right: 56px;
+                &:hover {
+                    color: #ee5744;
+                    border-bottom: 2px solid #ee5744;
+                }
+            }
+        }
+    }
+}
+
+.introThanksSection {
+    background-color: $blue;
+    width: 100%;
+    height: 100%;
+    padding-top: 71px;
+    padding-bottom: 108px;
+    &__titleHolder {
+        padding: 0 9.375% 63px;
+        &--mainTitle {
+            font-family: $fname;
+            font-size: 40px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 1px;
+            text-align: left;
+            color: #ffffff;
+            margin-bottom: 2px;
+        }
+    }
+    &__holder {
+        width: 100%;
+        display: flex;
+        padding: 0 9.375%;
+        .link {
+            font-family: $fname;
+            font-size: 30px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 1.1px;
+            text-align: left;
+            color: #ffffff;
+            padding-bottom: 10px;
+            margin-right: 70px;
+            transition: all 0.5s ease;
+            &:hover {
+                color: #ee5744;
+                border-bottom: 2px solid #ee5744;
+            }
+        }
+    }
+}
+
+
 
 // FOOTER
 .footer {
     position: relative;
-    background-color: #090c30;
+    background-color: #080a2c;
     .topFooter {
         padding: 27px 64px 19.5px;
         display: flex;
@@ -424,7 +1014,9 @@ body {
 .getLastestNews__holder.err .invalid-feedback {
     display: block;
 }
-
+.marTopAuto {
+    margin-top: auto;
+}
 
 .animated {
   	-webkit-animation-fill-mode: both;
