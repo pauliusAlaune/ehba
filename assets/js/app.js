@@ -48,9 +48,19 @@ $(document).ready(function() {
         return validEmail;
     }
     
+    
     $('.catListHolder__item').click(function(){
         $('.catListHolder__item').removeClass('active');
-        $(this).addClass('active');
+//        $('.dropdown__list').slideUp("slow");
+        $(this).toggleClass('active');
+        if($(this).hasClass('dropClick')){
+            console.log($(this).children('.dropdown__list'));
+            $('.dropdown__list').slideUp("slow");
+            $(this).children('.dropdown__list').slideDown("slow");
+        } else {
+            $('.dropdown__list').slideUp("slow");
+        }
     });
+    
 
 });

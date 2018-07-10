@@ -842,7 +842,7 @@ body {
     width: 100%;
     height: 100%;
     padding-top: 154px;
-    padding-bottom: 108px;
+    padding-bottom: 256px;
     &__holder {
         width: 100%;
         display: flex;
@@ -850,6 +850,7 @@ body {
             width: 23.263%;
             padding-left: 45px;
             padding-right: 51px;
+            padding-top: 26px;
             .catListHolder {
                 &__item {
                     font-family: $fname;
@@ -877,6 +878,23 @@ body {
                         transform: translateX(-61px);
                         transition: all 0.5s ease;
                     }
+                    .dropdown {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 38px;
+                        &--icon {
+                            transition: all 0.5s ease;
+                            transform: rotate(-90deg);
+                            margin-right: 0;
+                        }
+                    }
+                    .dropdown__list {
+                        display: none;
+                        &--item {
+                            margin-bottom: 38px;
+                            color: #ffffff;
+                        }
+                    }
                 }
                 &__item.active {
                     color: #ee5744;
@@ -884,12 +902,83 @@ body {
                     &::before {
                         transform: translateX(0px);
                     }
+                    .dropdown {
+                        &--icon {
+                            transform: rotate(0deg);
+                            margin-right: 26px;
+                        }
+                    }
                 }
             }
             
         }
         &__postsBlock {
             width: 76.737%;
+            padding-right: 9.375%;
+            padding-bottom: 56px;
+            &__titleAndSearch {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                &__titleBlock {
+                    width: 50%;
+                    .title {
+                        font-family: $fname;
+                        font-size: 40px;
+                        font-weight: 900;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: normal;
+                        letter-spacing: 1px;
+                        text-align: left;
+                        color: #ffffff;
+                    }
+                }
+                &__searchBlock {
+                    width: 20%;
+                    .search-container {
+                        width: 100%;
+                        .newsSectionSearch {
+                            display: flex;
+                            .newSearch {
+                                width: 80%;
+                                height: 32px;
+                                border-radius: 9px 0px 0px 9px;
+                                background-color: #1a1c3b;
+                                border: solid 1px #2b2e52;
+                                border-right: none;
+                                font-family: $fname;
+                                font-size: 13px;
+                                font-weight: normal;
+                                font-style: normal;
+                                font-stretch: normal;
+                                line-height: normal;
+                                letter-spacing: 0.6px;
+                                text-align: left;
+                                color: #ffffff;
+                                padding-left: 12px;
+                                &::placeholder {
+                                    color: #ffffff;
+                                }
+                            }
+                            .newBtnSearch {
+                                width: 20%;
+                                height: 32px;
+                                border-radius: 0px 9px 9px 0px;
+                                background-color: #1a1c3b;
+                                border: solid 1px #2b2e52;
+                                border-left: none;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                    }
+                }
+            }
+            &__postHolder {
+                
+            }
         }
     }
 }
