@@ -890,9 +890,16 @@ body {
                     }
                     .dropdown__list {
                         display: none;
+                        height: auto;
                         &--item {
                             margin-bottom: 38px;
                             color: #ffffff;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                        .dropdown__list--item.active {
+                            color: #ee5744;
                         }
                     }
                 }
@@ -977,7 +984,188 @@ body {
                 }
             }
             &__postHolder {
-                
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                padding-top: 54px;
+                &__block {
+                    margin-bottom: 30px;
+                    &:nth-child(odd){
+                        padding-right: 15px;
+                        width: 60%;
+                    }                    
+                    &:nth-child(even){
+                        padding-left: 15px;
+                        width: 40%;
+                    }
+                    .innerBlock {
+                        border-radius: 10px;
+                        background-color: #0f1234;
+                        min-height: 417px;
+//                        display: flex;
+//                        flex-direction: column;
+//                        justify-content: space-between;
+                        position: relative;
+                        &__imgLink {
+                            
+                            &:hover {
+                                .innerBlock__imgLink__imgHolder {
+                                    &--img {
+                                        transform: scale(1.2);
+                                    }
+                                }
+                            }
+                            &__imgHolder {
+                                height: 270px;
+                                width: 100%;
+                                border-radius: 10px 10px 0 0;
+                                overflow: hidden;
+                                &--img {
+                                    background-image: url('../images/rectangle-13.jpg');
+                                    background-repeat: no-repeat;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-size: cover;
+                                    border-radius: 10px 10px 0 0;
+                                    transition: all 0.5s ease;
+                                }
+                            }
+                        }
+                        &__infoHolder {
+                            width: 100%;
+                            height: 100%;
+                            padding: 20px;
+                            display: flex;
+                            flex-direction: column;
+                            height: 147px;
+                            justify-content: space-between;
+                            &__topBlock {
+                                display: flex;
+                                justify-content: space-between;
+                                .title {
+                                    font-family: $fname;
+                                    font-size: 17px;
+                                    font-weight: 600;
+                                    font-style: normal;
+                                    font-stretch: normal;
+                                    line-height: normal;
+                                    letter-spacing: 0.5px;
+                                    text-align: left;
+                                    color: #ffffff;
+                                }
+                                .date {
+                                    font-family: $fname;
+                                    font-size: 12px;
+                                    font-weight: normal;
+                                    font-style: normal;
+                                    font-stretch: normal;
+                                    line-height: normal;
+                                    letter-spacing: 0.4px;
+                                    text-align: left;
+                                    color: #ffffff;
+                                }
+                            }
+                            &__bottomBlock {
+                                .cat {
+                                    font-family: $fname;
+                                    font-size: 12px;
+                                    font-weight: normal;
+                                    font-style: normal;
+                                    font-stretch: normal;
+                                    line-height: normal;
+                                    letter-spacing: 0.4px;
+                                    text-align: left;
+                                    color: #ffffff;
+                                }
+                            }
+                        }
+                    }
+                }
+                &__miniBlock {
+                    width: 50%;
+                    margin-bottom: 30px;
+                    &:nth-child(odd){
+                        padding-right: 15px;
+                    }                    
+                    &:nth-child(even){
+                        padding-left: 15px;
+                    }
+                    .innerBlock {
+                        width: 100%;
+                        height: 210px;
+                        border-radius: 10px;
+                        background-color: #0f1234;
+                        display: flex;
+                        &__imgLink {
+                            width: 40%;
+                            height: 210px;
+                            &:hover {
+                                .innerBlock__imgLink__imgHolder {
+                                    &--img {
+                                        transform: scale(1.2);
+                                    }
+                                }
+                            }
+                            &__imgHolder {
+                                height: 210px;
+                                width: 100%;
+                                border-radius: 10px 0 0 10px;
+                                overflow: hidden;
+                                &--img {
+                                    background-image: url('../images/rectangle-13.jpg');
+                                    background-repeat: no-repeat;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-size: cover;
+                                    border-radius: 10px 0 0 10px;
+                                    transition: all 0.5s ease;
+                                }
+                            }
+                        }
+                        &__infoBlock {
+                            width: 60%;
+                            height: 210px;
+                            display: flex;
+                            flex-direction: column;
+                            padding: 15px 20px 25px;
+                            .title {
+                                font-family: $fname;
+                                font-size: 20px;
+                                font-weight: 600;
+                                font-style: normal;
+                                font-stretch: normal;
+                                line-height: normal;
+                                letter-spacing: 0.5px;
+                                text-align: left;
+                                color: #ffffff;
+                                margin-bottom: 20px;
+                            }
+                            .date {
+                                font-family: $fname;
+                                font-size: 12px;
+                                font-weight: normal;
+                                font-style: normal;
+                                font-stretch: normal;
+                                line-height: normal;
+                                letter-spacing: 0.4px;
+                                text-align: left;
+                                color: #ffffff;
+                            }
+                            .cat {
+                                font-family: $fname;
+                                font-size: 12px;
+                                font-weight: normal;
+                                font-style: normal;
+                                font-stretch: normal;
+                                line-height: normal;
+                                letter-spacing: 0.4px;
+                                text-align: left;
+                                color: #ffffff;
+                                margin-top: auto;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

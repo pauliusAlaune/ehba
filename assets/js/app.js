@@ -49,16 +49,42 @@ $(document).ready(function() {
     }
     
     
-    $('.catListHolder__item').click(function(){
-        $('.catListHolder__item').removeClass('active');
-//        $('.dropdown__list').slideUp("slow");
-        $(this).toggleClass('active');
-        if($(this).hasClass('dropClick')){
-            console.log($(this).children('.dropdown__list'));
+    $('.catListHolder__item').click(function(e){
+        e.stopPropagation();
+        if($(this).hasClass("active")){
+            $('.catListHolder__item').removeClass('active');
             $('.dropdown__list').slideUp("slow");
-            $(this).children('.dropdown__list').slideDown("slow");
+            $('.dropdown__list--item').removeClass('active');
+            if($(this).hasClass('dropClick')){
+                $(this).children('.dropdown__list').slideUp("slow");
+                $(this).children('.dropdown__list').removeClass('open');
+            }
         } else {
-            $('.dropdown__list').slideUp("slow");
+            $('.catListHolder__item').removeClass('active');
+            $(this).addClass('active');
+            if($(this).hasClass('dropClick')){
+                setTimeout(function(){
+                    $('.dropClick.active').children('.dropdown__list').slideDown('slow');
+                    $('.dropClick.active').children('.dropdown__list').addClass('open');
+                    console.log($('.dropClick.active'));
+                    console.log($('.dropClick.active').children('.dropdown__list'));
+                }, 700);
+            }
+            $('.dropdown__list--item').removeClass('active');
+            if($('.dropdown__list').hasClass('open')){
+                $('.dropdown__list').slideUp('slow');
+                $('.dropdown__list').removeClass('open');
+            }
+        }
+    });
+
+    $('.dropdown__list--item').click(function(e){
+        e.stopPropagation();
+        if($(this).hasClass("active")){
+           
+        } else {
+            $('.dropdown__list--item').removeClass('active');
+            $(this).addClass('active');  
         }
     });
     
