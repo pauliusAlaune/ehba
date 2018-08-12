@@ -1173,13 +1173,14 @@ body {
     }
 }
 
+
+
 //    NEWS SINGLE PAGE
 .newsSingleSection {
     background-color: $blue;
     width: 100%;
     height: 100%;
     padding-top: 154px;
-    padding-bottom: 256px;
     &__holder {
         width: 100%;
         display: flex;
@@ -1242,6 +1243,16 @@ body {
                         background-position: center;
                     }
                 }
+                .miniTitle {
+                    font-family: $fname;
+                    font-size: 22px;
+                    font-weight: 600;
+                    line-height: 1.18;
+                    letter-spacing: 0.8px;
+                    text-align: left;
+                    color: #ffffff;
+                    margin-bottom: 15px;
+                }
                 .para {
                     font-family: $fname;
                     font-size: 16px;
@@ -1252,6 +1263,70 @@ body {
                     letter-spacing: 0.8px;
                     text-align: left;
                     color: #ffffff;
+                    margin-bottom: 35px;
+                }
+            }
+			.eventPrevNextHolder {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				margin-top: 70px;
+				margin-bottom: 80px;
+				.prevBtn {
+					display: flex;
+					&--icon {
+						transform: rotate(90deg);
+					}
+					&--name {
+						margin-left: 10px;
+						font-family: $fname;
+						font-size: 14px;
+						font-weight: normal;
+						font-style: normal;
+						font-stretch: normal;
+						line-height: normal;
+						letter-spacing: 0.8px;
+						text-align: left;
+						color: #ffffff;
+					}
+				}
+				.nextBtn {
+					display: flex;
+					&--icon {
+						transform: rotate(-90deg);
+					}
+					&--name {
+						margin-right: 10px;
+						font-family: $fname;
+						font-size: 14px;
+						font-weight: normal;
+						font-style: normal;
+						font-stretch: normal;
+						line-height: normal;
+						letter-spacing: 0.8px;
+						text-align: left;
+						color: #ffffff;
+					}
+				}
+			}
+        }
+    }
+}
+
+.socialLinkHolder {
+	width: 100%;
+    display: flex;
+    justify-content: center;
+    &--link {
+    	margin: 8px;
+        &:hover {
+        	.iconHolder {
+            	background-color: rgba(238,87,68,1);
+                &--iconfb,
+                &--icontwitter,
+                &--icongplus,
+                &--icongmessage {
+                	transform: scale(1.1);
                 }
             }
         }
@@ -1430,6 +1505,79 @@ body {
         }
     }
 }
+
+// icon
+.iconHolder {
+    width: 55px;
+    height: 55px;
+    background-color: rgba(238, 87, 68, 0.13);
+    border: solid 1px #ee5744;
+    position: relative;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    &--iconfb {
+        width: 12px;
+        height: 26px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-image: url(../images/facebook.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: all 0.5s ease;
+    }
+    &--icontwitter {
+        width: 27px;
+        height: 22px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-image: url(../images/twitter.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: all 0.5s ease;
+    }
+    &--icongplus {
+        width: 32px;
+        height: 21px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-image: url(../images/google-plus.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: all 0.5s ease;
+    }    
+    &--icongmessage {
+        width: 25.1px;
+        height: 15px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-image: url(../images/message.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: all 0.5s ease;
+    }
+}
+
+
 
 .getLastestNews__holder.err .invalid-feedback {
     display: block;

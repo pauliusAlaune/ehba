@@ -8,8 +8,13 @@
                     <li class="topFooter__menuBlock__listHolder--item"><a href="#">Events</a></li>
                 </ul>
             </div>
-            <div class="topFooter__socialBlock">
-                <a href="#" class="topFooter__socialBlock--link"><img src="assets/images/fb_red.svg"></a>
+            <div class="topFooter__socialBlock socialLinkHolder">
+<!--                <a href="#" class="topFooter__socialBlock--link"><img src="assets/images/fb_red.svg"></a>-->
+           		<a href="#" target="_blank" class="socialLinkHolder--link">
+                    <div class="iconHolder">
+                        <div class="iconHolder--iconfb"></div>
+                    </div>
+                </a> 
             </div>
             <div class="topFooter__getNewsBlock">
                 <p class="topFooter__getNewsBlock--name">Get latest news</p>
