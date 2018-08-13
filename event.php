@@ -44,8 +44,94 @@
 						<h5 class="text">SPONSOR CONTENT</h5>
 					</a>
 				</div>
+				<div class="addEvent">
+					<div class="sabeBtnHolder">
+						<button class="sabeBtn">SUBMIT A BID EHBC</button>
+					</div>
+					<div class="addEventBtnHolder">
+						<button class="addEventBtn"><span class="word">ADD EVENT</span><span class="psuedoIcon"></span></button>
+					</div>
+				</div>
 			</div>
 		</div>
+		<div class="eventSection__holder__wrapper">
+        <a href="" class="eventSection__holder__wrapper__block">
+            <div class="eventSection__holder__wrapper__block__inner">
+                <div class="eventSection__holder__wrapper__block__inner__leftBlock">
+                    <img src="assets/images/introEvents1.jpg" alt="">
+                    <span class="overlay"></span>
+                    <span class="hoverBorder"></span>
+                </div>
+                <div class="eventSection__holder__wrapper__block__inner__rightBlock">
+                    <div class="nameDateBlock">
+                        <p class="title">Indian Summer Bike Polo Games Vol.3</p>
+                        <p class="date">27 March 2018</p>
+                    </div>
+                    <div class="placeBlock">
+                        <p class="place"><img src="assets/images/location-pin-marker-gps-map-optimization-place.svg"><span class="name">Vilnius</span></p>
+                        <p class="sort"><img src="assets/images/mixed.svg"><span class="name">Mixed</span></p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="" class="eventSection__holder__wrapper__block">
+            <div class="eventSection__holder__wrapper__block__inner">
+                <div class="eventSection__holder__wrapper__block__inner__leftBlock">
+                    <img src="assets/images/introEvents1.jpg" alt="">
+                    <span class="overlay"></span>
+                    <span class="hoverBorder"></span>
+                </div>
+                <div class="eventSection__holder__wrapper__block__inner__rightBlock">
+                    <div class="nameDateBlock">
+                        <p class="title">Indian Summer Bike Polo Games Vol.3</p>
+                        <p class="date">27 March 2018</p>
+                    </div>
+                    <div class="placeBlock">
+                        <p class="place"><img src="assets/images/location-pin-marker-gps-map-optimization-place.svg"><span class="name">Vilnius</span></p>
+                        <p class="sort"><img src="assets/images/mixed.svg"><span class="name">Mixed</span></p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="" class="eventSection__holder__wrapper__block">
+            <div class="eventSection__holder__wrapper__block__inner">
+                <div class="eventSection__holder__wrapper__block__inner__leftBlock">
+                    <img src="assets/images/introEvents1.jpg" alt="">
+                    <span class="overlay"></span>
+                    <span class="hoverBorder"></span>
+                </div>
+                <div class="eventSection__holder__wrapper__block__inner__rightBlock">
+                    <div class="nameDateBlock">
+                        <p class="title">Indian Summer Bike Polo Games Vol.3</p>
+                        <p class="date">27 March 2018</p>
+                    </div>
+                    <div class="placeBlock">
+                        <p class="place"><img src="assets/images/location-pin-marker-gps-map-optimization-place.svg"><span class="name">Vilnius</span></p>
+                        <p class="sort"><img src="assets/images/mixed.svg"><span class="name">Mixed</span></p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="" class="eventSection__holder__wrapper__block">
+            <div class="eventSection__holder__wrapper__block__inner">
+                <div class="eventSection__holder__wrapper__block__inner__leftBlock">
+                    <img src="assets/images/introEvents1.jpg" alt="">
+                    <span class="overlay"></span>
+                    <span class="hoverBorder"></span>
+                </div>
+                <div class="eventSection__holder__wrapper__block__inner__rightBlock">
+                    <div class="nameDateBlock">
+                        <p class="title">Indian Summer Bike Polo Games Vol.3</p>
+                        <p class="date">27 March 2018</p>
+                    </div>
+                    <div class="placeBlock">
+                        <p class="place"><img src="assets/images/location-pin-marker-gps-map-optimization-place.svg"><span class="name">Vilnius</span></p>
+                        <p class="sort"><img src="assets/images/mixed.svg"><span class="name">Mixed</span></p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
 	</div>
 </section>
 
