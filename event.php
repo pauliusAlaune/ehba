@@ -12,10 +12,10 @@
 				</div>
 				<form class="mapBlock__eventBlock">
 					<div class="mapBlock__eventBlock__sortBy">
-						<button class="sortByBtn">
+						<p class="sortByBtn">
 							<span class="word">SORT BY</span>
 							<img class="icon" src="assets/images/ico-dropdown.svg">
-						</button>
+						</p>
 					</div>
 					<div class="mapBlock__eventBlock__category">
 						<button class="categoryBtn">
@@ -54,6 +54,9 @@
 				</div>
 			</div>
 		</div>
+		<div class="eventSection__holder__wrapperName">
+			<h3 class="title">UPCOMING EVENTS</h3>
+		</div>
 		<div class="eventSection__holder__wrapper">
         <a href="" class="eventSection__holder__wrapper__block">
             <div class="eventSection__holder__wrapper__block__inner">
@@ -61,6 +64,7 @@
                     <img src="assets/images/introEvents1.jpg" alt="">
                     <span class="overlay"></span>
                     <span class="hoverBorder"></span>
+                    <span class="hoverView">View</span>
                 </div>
                 <div class="eventSection__holder__wrapper__block__inner__rightBlock">
                     <div class="nameDateBlock">
@@ -80,6 +84,7 @@
                     <img src="assets/images/introEvents1.jpg" alt="">
                     <span class="overlay"></span>
                     <span class="hoverBorder"></span>
+                    <span class="hoverView">View</span>
                 </div>
                 <div class="eventSection__holder__wrapper__block__inner__rightBlock">
                     <div class="nameDateBlock">
@@ -99,6 +104,7 @@
                     <img src="assets/images/introEvents1.jpg" alt="">
                     <span class="overlay"></span>
                     <span class="hoverBorder"></span>
+                    <span class="hoverView">View</span>
                 </div>
                 <div class="eventSection__holder__wrapper__block__inner__rightBlock">
                     <div class="nameDateBlock">
@@ -118,6 +124,7 @@
                     <img src="assets/images/introEvents1.jpg" alt="">
                     <span class="overlay"></span>
                     <span class="hoverBorder"></span>
+                    <span class="hoverView">View</span>
                 </div>
                 <div class="eventSection__holder__wrapper__block__inner__rightBlock">
                     <div class="nameDateBlock">

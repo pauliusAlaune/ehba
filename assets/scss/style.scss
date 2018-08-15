@@ -1266,51 +1266,55 @@ body {
                     margin-bottom: 35px;
                 }
             }
-			.eventPrevNextHolder {
-				width: 100%;
-				display: flex;
-				justify-content: space-between;
-				margin-top: 70px;
-				margin-bottom: 80px;
-				.prevBtn {
-					display: flex;
-					&--icon {
-						transform: rotate(90deg);
-					}
-					&--name {
-						margin-left: 10px;
-						font-family: $fname;
-						font-size: 14px;
-						font-weight: normal;
-						font-style: normal;
-						font-stretch: normal;
-						line-height: normal;
-						letter-spacing: 0.8px;
-						text-align: left;
-						color: #ffffff;
-					}
-				}
-				.nextBtn {
-					display: flex;
-					&--icon {
-						transform: rotate(-90deg);
-					}
-					&--name {
-						margin-right: 10px;
-						font-family: $fname;
-						font-size: 14px;
-						font-weight: normal;
-						font-style: normal;
-						font-stretch: normal;
-						line-height: normal;
-						letter-spacing: 0.8px;
-						text-align: left;
-						color: #ffffff;
-					}
-				}
-			}
         }
     }
+}
+
+
+.eventPrevNextHolder {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 70px;
+	margin-bottom: 80px;
+	.prevBtn {
+		display: flex;
+		cursor: pointer;
+		&--icon {
+			transform: rotate(90deg);
+		}
+		&--name {
+			margin-left: 10px;
+			font-family: $fname;
+			font-size: 14px;
+			font-weight: normal;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: normal;
+			letter-spacing: 0.8px;
+			text-align: left;
+			color: #ffffff;
+		}
+	}
+	.nextBtn {
+		display: flex;
+		cursor: pointer;
+		&--icon {
+			transform: rotate(-90deg);
+		}
+		&--name {
+			margin-right: 10px;
+			font-family: $fname;
+			font-size: 14px;
+			font-weight: normal;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: normal;
+			letter-spacing: 0.8px;
+			text-align: left;
+			color: #ffffff;
+		}
+	}
 }
 
 
@@ -1375,7 +1379,6 @@ body {
 							align-items: center;
 							background: transparent;
 							border: none;
-							cursor: pointer;
 							.word {
 								font-family: $fname;
 								font-size: 14px;
@@ -1389,7 +1392,7 @@ body {
 								margin-right: 12px;
 							}
 							.icon {
-								
+								transform: rotate(-90deg);
 							}
 						}
 					}
@@ -1404,6 +1407,7 @@ body {
 							display: flex;
 							justify-content: space-between;
 							align-items: center;
+							cursor: pointer;
 							.word {
 								font-family: $fname;
 								font-size: 14px;
@@ -1564,7 +1568,12 @@ body {
 							line-height: normal;
 							letter-spacing: 0.9px;
 							text-align: left;
-							color: #ee5744;							
+							color: #ee5744;
+							transition: all 0.5s ease;
+							&:hover {
+								background-color: rgba(238, 87, 68, 1);
+								color: #fff;
+							}
 						}
 					}
 					.addEventBtnHolder {
@@ -1615,11 +1624,26 @@ body {
 				}
 			}
 		}
+		&__wrapperName {
+			width: 100%;
+			padding: 64px 0 48px;
+			.title {
+				font-family: $fname;
+				font-size: 28px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: 1px;
+				text-align: left;
+				color: #ffffff;
+				text-transform: uppercase;
+			}
+		}
 		&__wrapper {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        padding: 0 9.375% 39px;
         &__block {
             width: 50%;
             padding-bottom: 30px;
@@ -1631,14 +1655,17 @@ body {
                 padding-right: 15px;
             }
             &:hover {
-                .introEventsSection__holder__block__inner {
-                    .introEventsSection__holder__block__inner__leftBlock {
+                .eventSection__holder__wrapper__block__inner {
+                    .eventSection__holder__wrapper__block__inner__leftBlock {
                         .overlay {
                             opacity: 1;
                         }
                         .hoverBorder {
                             opacity: 1;
                         }
+						.hoverView {
+							opacity: 1;
+						}
                     }
                 }
             }
@@ -1670,6 +1697,7 @@ body {
                         border-radius: 10px 0 0 10px;
                         opacity: 0;
                         transition: all 0.5s ease;
+						z-index: 10;
                     }
                     .hoverBorder {
                         width: 90%;
@@ -1686,6 +1714,25 @@ body {
                         opacity: 0;
                         transition: all 0.5s ease;
                     }
+					.hoverView {
+						font-family: $fname;
+						font-size: 22px;
+						font-weight: 600;
+						font-style: normal;
+						font-stretch: normal;
+						line-height: normal;
+						letter-spacing: 1.4px;
+						text-align: left;
+						color: #ffffff;
+						z-index: 25;
+						position: absolute;
+						margin: auto;
+						top: 45%;
+						transform: translate(-50%);
+						left: 50%;
+						opacity: 0;
+						transition: all 0.5s ease;
+					}
                 }
                 &__rightBlock {
                     position: relative;
@@ -1765,6 +1812,38 @@ body {
 	
 }
 
+// single event
+.eventSingleSection {
+	background-color: $blue;
+    width: 100%;
+    height: 100%;
+    padding-top: 154px;
+	padding-bottom: 228px;
+	&__holder {
+		width: 100%;
+        padding: 0 9.375%;
+		.backBtn {
+        	display: flex;
+            &--icon {
+            	transform: rotate(90deg);
+            }
+            &--name {
+            	margin-left: 10px;
+                font-family: $fname;
+                font-size: 14px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: 0.8px;
+                text-align: left;
+                color: #ffffff;
+            }
+    	}
+		
+	}
+}
+
 .socialLinkHolder {
 	width: 100%;
     display: flex;
@@ -1784,6 +1863,9 @@ body {
         }
     }
 }
+
+
+
 
 // FOOTER
 .footer {
