@@ -48,7 +48,7 @@ $(document).ready(function() {
         return validEmail;
     }
     
-    
+    // category list
     $('.catListHolder__item').click(function(e){
         e.stopPropagation();
         if($(this).hasClass("active")){
@@ -88,5 +88,32 @@ $(document).ready(function() {
         }
     });
     
+    // about navbar
+    let ul = document.getElementById('aboutNavbar');  // Parent
+
+    ul.addEventListener('click', function(e) {
+        console.log('cl');
+        if (e.target.tagName === 'LI'){
+            let activeLi = document.querySelector('.navbarListHolder__item.active');
+            let idName = './aboutInnerContent/' + e.target.id + '.php';
+            getText(idName);
+            activeLi.classList.remove('active');
+            e.target.classList.add('active');
+        }
+    });
+    //    // get local text file
+    function getText(name){
+        fetch(name)
+        .then(function(res){
+            return res.text();
+        })
+        .then(function(data){
+            console.log(data);
+            document.getElementById('output').innerHTML = data;
+        })
+        .catch(function(err){
+            console.log(err);
+        });
+    }
 
 });
