@@ -2009,6 +2009,109 @@ body {
             width: 76.737%;
             padding-right: 9.375%;
             padding-bottom: 56px;
+            .title {
+                font-family: $fname;
+                font-size: 40px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: 1.9px;
+                text-align: left;
+                color: #ffffff;
+                margin-bottom: 54px;
+            }
+            &--inner {
+                width: 100%;
+                .para {
+                    font-family: $fname;
+                    font-size: 16px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.63;
+                    letter-spacing: 1.1px;
+                    text-align: left;
+                    color: #ffffff;
+                }
+                .historyHolder {
+                    width: 100%;
+                    display: flex;
+                    height: 200px;
+                    &__leftBlock {
+                        width: calc(50% - 105.5px);
+                        .imgBlock {
+                            width: 100%;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    &__centerBlock {
+                        width: 211px;
+                        display: flex;
+                        &--leftLine {
+                            width: 91px;
+                            margin-top: 14px;
+                            .lineH {
+                                width: 100%;
+                                height: 2px;
+                                background-color: #ee5744;
+                            }
+                        }
+                        &--center {
+                            width: 29px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            .circle {
+                                width: 29px;
+                                height: 29px;
+                                border: solid 1px #ee5744;
+                                border-radius: 50%;
+                                position: relative;
+                                &::after {
+                                    content: '';
+                                    width: 15px;
+                                    height: 15px;
+                                    background-color: #ee5744;
+                                    border-radius: 50%;
+                                    position: absolute;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    right: 0;
+                                    margin: auto;
+                                }
+                            }
+                            .lineV {
+                                width: 2px;
+                                height: calc(100% - 29px);
+                                background-color: #ee5744;
+                            }
+                        }
+                        &--rightLine {
+                            width: 91px;
+                            margin-top: 14px;
+                            .lineH {
+                                width: 100%;
+                                height: 2px;
+                                background-color: #ee5744;
+                            }
+                        }
+                    }
+                    &__rightBlock {
+                        width: calc(50% - 105.5px);
+                        .imgBlock {
+                            width: 100%;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
