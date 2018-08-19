@@ -89,22 +89,27 @@ $(document).ready(function() {
         }
     });
     
-    // about navbar
-    let activeLiId = document.querySelector('.navbarListHolder__item.active').id;
-    let activeIdName = './aboutInnerContent/' + activeLiId + '.php';
-    getText(activeIdName);    
     
-    let ul = document.getElementById('aboutNavbar');  // Parent
+    // about navbar
+    const about = document.querySelector('.aboutSection');
+    if(about){
+        let activeLiId = document.querySelector('.navbarListHolder__item.active').id;
+        let activeIdName = './aboutInnerContent/' + activeLiId + '.php';
+        getText(activeIdName);    
 
-    ul.addEventListener('click', function(e) {
-        if (e.target.tagName === 'LI'){
-            let activeLi = document.querySelector('.navbarListHolder__item.active');
-            let idName = './aboutInnerContent/' + e.target.id + '.php';
-            getText(idName);
-            activeLi.classList.remove('active');
-            e.target.classList.add('active');
-        }
-    });
+        let ul = document.getElementById('aboutNavbar');  // Parent
+
+        ul.addEventListener('click', function(e) {
+            if (e.target.tagName === 'LI'){
+                let activeLi = document.querySelector('.navbarListHolder__item.active');
+                let idName = './aboutInnerContent/' + e.target.id + '.php';
+                getText(idName);
+                activeLi.classList.remove('active');
+                e.target.classList.add('active');
+            }
+        });
+    }
+
     // get local file
     function getText(name){
         fetch(name)
@@ -139,6 +144,11 @@ $(document).ready(function() {
     
     $('.aboutSection__holder__contentBlock .title').click(function(){
        console.log(this); 
+    });
+    
+    $('#categoryBtn').click(function(e){
+        e.preventDefault();
+        $('#categoryList').slideToggle('slow');
     });
 
 });

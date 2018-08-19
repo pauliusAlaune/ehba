@@ -18,10 +18,19 @@
 						</p>
 					</div>
 					<div class="mapBlock__eventBlock__category">
-						<button class="categoryBtn">
+						<p id="categoryBtn" class="categoryBtn">
 							<span class="word">CATEGORY</span>
 							<img class="icon" src="assets/images/ico-dropdown.svg">
-						</button>
+						</p>
+						<div id="categoryList" class="categoryList">
+						    <ul class="categoryList__holder">
+                                <li class="categoryList__holder--item active">All</li>
+						        <li class="categoryList__holder--item">Bench</li>
+						        <li class="categoryList__holder--item">Mixed</li>
+						        <li class="categoryList__holder--item">3x3</li>
+						        <li class="categoryList__holder--item">4x4</li>
+						    </ul>
+						</div>
 					</div>
 					<div class="mapBlock__eventBlock__date">
 						<button class="dateBtn">
