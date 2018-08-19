@@ -1994,6 +1994,7 @@ body {
     background-color: $blue;
     width: 100%;
     height: 100%;
+    min-height: calc(100vh - 221px);
 	padding: 154px 0 122px;
     &__holder {
         width: 100%;
@@ -2290,6 +2291,102 @@ body {
                                         letter-spacing: 1.4px;
                                         text-align: center;
                                         color: #ffffff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .charterWrapper {
+                    &__holder {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        &__block {
+//                            height: 46px;
+                            border-radius: 10px;
+                            width: 100%;
+                            background-color: #0f1234;
+                            padding: 10px 31px 10px 21px;
+                            margin-bottom: 7px;
+                            &--title {
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                cursor: pointer;
+                                .title {
+                                    font-family: $fname;
+                                    font-size: 20px;
+                                    font-weight: 600;
+                                    font-style: normal;
+                                    font-stretch: normal;
+                                    line-height: 1.3;
+                                    letter-spacing: 1px;
+                                    text-align: left;
+                                    color: #ffffff;
+                                    margin-bottom: 0;
+                                }
+                                .plusMinus {
+                                    width: 20px;
+                                    height: 20px;
+                                    position: relative;
+                                    .first {
+                                        position: absolute;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        width: 100%;
+                                        height: 3px;
+                                        background-color: #ee5744;
+                                    }
+                                    .second {
+                                        position: absolute;
+                                        left: 0;
+                                        right: 0;
+                                        margin: auto;
+                                        transform: rotate(0deg);
+                                        height: 100%;
+                                        width: 3px;
+                                        background-color: #ee5744;
+                                        transition: all 0.5s ease;
+                                    }
+                                }
+                            }
+                            .charterWrapper__holder__block--title.active {
+                                .plusMinus {
+                                    .second {
+                                        transform: rotate(90deg);
+                                    }
+                                }
+                            }
+                            &--content {
+                                padding: 8px 30px 20px 29px;
+                                display: none;
+                                .listHolder {
+                                    width: 100%;
+                                    list-style-type: decimal;
+                                    &--item {
+                                        font-family: $fname;
+                                        font-size: 16px;
+                                        font-weight: normal;
+                                        font-style: normal;
+                                        font-stretch: normal;
+                                        line-height: 1.63;
+                                        letter-spacing: 0.8px;
+                                        text-align: left;
+                                        color: #ffffff;
+                                        margin-bottom: 5px;
+                                        ul,
+                                        ol {
+                                            list-style-type: lower-alpha;
+                                            padding-left: 40px;
+                                            li {
+                                                ul,
+                                                ol {
+                                                    list-style-type: disc;
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }

@@ -47,6 +47,7 @@ $(document).ready(function() {
         }
         return validEmail;
     }
+
     
     // category list
     $('.catListHolder__item').click(function(e){
@@ -96,7 +97,6 @@ $(document).ready(function() {
     let ul = document.getElementById('aboutNavbar');  // Parent
 
     ul.addEventListener('click', function(e) {
-        console.log('cl');
         if (e.target.tagName === 'LI'){
             let activeLi = document.querySelector('.navbarListHolder__item.active');
             let idName = './aboutInnerContent/' + e.target.id + '.php';
@@ -112,12 +112,33 @@ $(document).ready(function() {
             return res.text();
         })
         .then(function(data){
-            console.log(data);
             document.getElementById('output').innerHTML = data;
         })
         .catch(function(err){
             console.log(err);
         });
     }
+    
+    
+    $(document).on('click', '.openBtn', function(e) {
+        console.log(this);
+        e.stopPropagation();
+        if ($(this).hasClass("active")) {
+            $(".openBtn").next().removeClass("open");
+            $(".openBtn").next().slideUp("slow");
+            $(".openBtn").removeClass("active");
+        } else {
+            $(".openBtn").next().removeClass("open");
+            $(".openBtn").next().slideUp("slow");
+            $(".openBtn").removeClass("active");
+            $(this).next().slideToggle("slow");
+            $(this).next().toggleClass("open");
+            $(this).toggleClass("active");
+        }
+    });
+    
+    $('.aboutSection__holder__contentBlock .title').click(function(){
+       console.log(this); 
+    });
 
 });
