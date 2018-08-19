@@ -89,6 +89,10 @@ $(document).ready(function() {
     });
     
     // about navbar
+    let activeLiId = document.querySelector('.navbarListHolder__item.active').id;
+    let activeIdName = './aboutInnerContent/' + activeLiId + '.php';
+    getText(activeIdName);    
+    
     let ul = document.getElementById('aboutNavbar');  // Parent
 
     ul.addEventListener('click', function(e) {
@@ -101,7 +105,7 @@ $(document).ready(function() {
             e.target.classList.add('active');
         }
     });
-    //    // get local text file
+    // get local file
     function getText(name){
         fetch(name)
         .then(function(res){
