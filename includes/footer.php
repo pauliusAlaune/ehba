@@ -39,6 +39,7 @@
         </div>
     </footer>
     <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>

@@ -33,10 +33,11 @@
 						</div>
 					</div>
 					<div class="mapBlock__eventBlock__date">
-						<button class="dateBtn">
+						<p id="dateBtn" class="dateBtn">
 							<span class="word">DATE</span>
 							<img class="icon" src="assets/images/ico-dropdown.svg">
-						</button>
+						</p>
+						<input type="text" id="datepicker" class="datepickerInput">
 					</div>
 					<div class="mapBlock__eventBlock__search">
 						<input type="text" name="searchWord" id="searchWord" class="searchWord" placeholder="Search events">

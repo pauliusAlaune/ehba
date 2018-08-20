@@ -1464,6 +1464,7 @@ body {
                         }
 					}
 					&__date {
+                        position: relative;
 						.dateBtn {
 							display: flex;
 							justify-content: center;
@@ -1487,6 +1488,11 @@ body {
 								
 							}
 						}
+                        .datepickerInput {
+                            position: absolute;
+                            top: 0;
+                            visibility: hidden;
+                        }
 					}
 					&__search {
 						width: 201px;
@@ -2855,7 +2861,93 @@ body {
 .marTopAuto {
     margin-top: auto;
 }
+.ui-widget-content.ui-widget.ui-widget-content {
+    border-radius: 10px;
+    background-color: #1a1c3b;
+    border: 1px solid #1a1c3b;
+    margin-top: 15px;
+    z-index: 200!important;
+    .ui-datepicker-header {
+        background-color: #1a1c3b;
+        border: none;
+        .ui-datepicker-title {
+            color: #fff;
+            font-family: $fname;
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 0.7px;
+            color: #ffffff;
+        }
+        .ui-datepicker-prev span {
+            background-image: url(../images/next.svg) !important;
+            background-position: 0px 0px !important;
+            transform: rotate(180deg);
+            background-size: cover;
+            width: 15px;
+            height: 15px;
+        }
 
+        .ui-datepicker-next span {
+            background-image: url(../images/next.svg) !important;
+            background-position: 0px 0px !important;
+            background-size: cover;
+            width: 15px;
+            height: 15px;
+        }
+    }
+    .ui-datepicker-calendar {
+        color: #fff;
+        font-family: $fname;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.7px;
+    }
+    .ui-state-default {
+        font-family: $fname;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.7px;
+        text-align: left;
+        color: #ffffff;
+        background-color: #1a1c3b;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease;
+        &:hover {
+            border: solid 1px #ee5744;
+            background-color: #ee5744;
+        }
+    }
+    .ui-state-default.ui-state-highlight {
+        width: 32px;
+        height: 32px;
+        border: solid 1px #ee5744;
+    }
+    .ui-state-default.ui-state-active {
+        width: 32px;
+        height: 32px;
+        border: solid 1px #ee5744;
+        background-color: #ee5744;
+    }
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover {
+    border: none;
+    background: transparent;
+    color: transparent;
+}
 .animated {
   	-webkit-animation-fill-mode: both;
 	  -moz-animation-fill-mode: both;

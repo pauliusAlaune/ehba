@@ -150,5 +150,18 @@ $(document).ready(function() {
         e.preventDefault();
         $('#categoryList').slideToggle('slow');
     });
+    
+    $('#datepicker').datepicker();
+    $('#dateBtn').click(function() {
+          $('#datepicker').datepicker('show');
+    });
+
+    
+//    $( function() {
+//        $( "#datepicker" ).datepicker();
+//    });
+//    function callDatepicker(){
+//        $( "#datepicker" ).datepicker();
+//    }
 
 });
