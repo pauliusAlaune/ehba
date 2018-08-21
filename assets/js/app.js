@@ -119,6 +119,10 @@ $(document).ready(function() {
         })
         .then(function(data){
             document.getElementById('output').innerHTML = data;
+            setTimeout(function(){
+                document.getElementById('output').firstChild.classList.add('fadeIn');
+            }, 200);
+            
         })
         .catch(function(err){
             console.log(err);
