@@ -191,13 +191,18 @@ body {
         background-color: #090c30;
         top: 0;
         left: 0;
-        padding: 230px 15.97% 0;
+        padding: 0px 10.97% 0;
         transform: translateX(100%);
         transition: all 0.5s ease;
         &__holder {
             display: flex;
             justify-content: space-between;
+            align-items: baseline;
             .menuBlock {
+                padding-top: 20.065%;
+                padding-left: 33px;
+                height: auto;
+                position: relative;
                 &--name {
                     font-family: $fname;
                     font-size: 18px;
@@ -222,14 +227,66 @@ body {
                         text-align: left;
                         color: #ffffff;
                         margin-bottom: 10px;
+                        position: relative;
+                        transform: translateX(0px);
+                        transition: all 0.5s ease;
+                        &:hover {
+                            transform: translateX(29px);
+                            &::before {
+                                opacity: 1;
+                            }
+                        }
                         &:first-child {
                             margin-top: 0;
                             a {
                                 padding-top: 0;
                             }
                         }
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: -29px;
+                            background-image: url('../images/Shape.svg');
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            width: 18px;
+                            height: 18px;
+                            animation: mymove 4s linear infinite;
+                            opacity: 0;
+                            transition: all 0.5s ease;
+                        }
                         a {
                             padding: 6px 0;
+                        }
+                    }
+                }
+            }
+            .menuBlock.active {
+                &::before {
+                    content: '';
+                    height: 100%;
+                    width: 2px;
+                    background-color: #ee5744;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                .menuBlock__listHolder {
+                    .menuBlock__listHolder--item.active {
+                        position: relative;
+                        transform: translateX(29px);
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: -29px;
+                            background-image: url('../images/Shape.svg');
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            width: 18px;
+                            height: 18px;
+                            opacity: 1;
                         }
                     }
                 }

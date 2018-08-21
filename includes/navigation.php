@@ -28,11 +28,11 @@
     </div>
     <nav class="navBlock">
         <div class="navBlock__holder">
-            <div class="menuBlock">
+            <div class="menuBlock active">
                 <p class="menuBlock--name">OTHER</p>
                 <ul class="menuBlock__listHolder">
                     <li class="menuBlock__listHolder--item"><a href="">Forum</a></li>
-                    <li class="menuBlock__listHolder--item"><a href="">Questionnaire</a></li>
+                    <li class="menuBlock__listHolder--item active"><a href="">Questionnaire</a></li>
                     <li class="menuBlock__listHolder--item"><a href="">Links to website</a></li>
                     <li class="menuBlock__listHolder--item"><a href="">Submit event</a></li>
                 </ul>
