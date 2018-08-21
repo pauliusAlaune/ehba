@@ -2,10 +2,10 @@
         <div class="topFooter">
             <div class="topFooter__menuBlock">
                 <ul class="topFooter__menuBlock__listHolder">
-                    <li class="topFooter__menuBlock__listHolder--item"><a href="#">About us</a></li>
-                    <li class="topFooter__menuBlock__listHolder--item"><a href="#">Blog</a></li>
+                    <li class="topFooter__menuBlock__listHolder--item"><a href="about.php">About us</a></li>
+                    <li class="topFooter__menuBlock__listHolder--item"><a href="news.php">Blog</a></li>
                     <li class="topFooter__menuBlock__listHolder--item"><a href="#">Store</a></li>
-                    <li class="topFooter__menuBlock__listHolder--item"><a href="#">Events</a></li>
+                    <li class="topFooter__menuBlock__listHolder--item"><a href="event.php">Events</a></li>
                 </ul>
             </div>
             <div class="topFooter__socialBlock socialLinkHolder">

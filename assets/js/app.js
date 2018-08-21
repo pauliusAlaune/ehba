@@ -12,6 +12,7 @@ $(document).ready(function() {
     navToggle.addEventListener('click', function(){
         const navBlock = document.querySelector('.navBlock');
         navBlock.classList.toggle('active');
+        navToggle.classList.toggle('active');
     });
     
     // get Lastest News validation
@@ -97,7 +98,7 @@ $(document).ready(function() {
         let activeIdName = './aboutInnerContent/' + activeLiId + '.php';
         getText(activeIdName);    
 
-        let ul = document.getElementById('aboutNavbar');  // Parent
+        let ul = document.getElementById('aboutNavbar');
 
         ul.addEventListener('click', function(e) {
             if (e.target.tagName === 'LI'){

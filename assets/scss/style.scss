@@ -111,6 +111,75 @@ body {
             &--menuToggle {
                 cursor: pointer;
                 z-index: 150;
+                width: 42px;
+                height: 40px;
+                margin-top: -10px;
+                position: relative;
+                .firstIcon {
+                    position: relative;
+                    .stickIcon {
+                        position: absolute;
+                        top: -4px;
+                        bottom: 0px;
+                        left: 6px;
+                        transform: rotate(45deg);
+                        transition: all 0.5s ease;
+                    }
+                    .stickIconTop {
+                        position: absolute;
+                        top: 0;
+                        right: 2px;
+                        opacity: 0;
+                        transform: translate(50px, -50px);
+                        transition: all 0.5s ease;
+                    }
+                }
+                .secondIcon {
+                    position: relative;
+                    .stickIcon {
+                        position: absolute;
+                        top: 5px;
+                        bottom: 0;
+                        right: 7px;
+                        transform: scale(-1, 1) rotate(45deg);
+                        transition: all 0.5s ease;
+                    }
+                    .stickIconTop {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        transform: scale(-1, 1) rotate(0deg) translate(50px, -50px);
+                        opacity: 0;
+                        transition: all 0.5s ease;
+                    }
+                }
+            }
+            .header__holder__rightBlock--menuToggle.active {
+                .firstIcon {
+                    .stickIcon {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        transform: rotate(0deg);
+                    }
+                    .stickIconTop {
+                        opacity: 1;
+                        transform: translate(0px, 0px);
+                    }
+                }
+                .secondIcon {
+                    .stickIcon {
+                        top: 0;
+                        bottom: 0;
+                        right: 2px;
+                        transform: scale(-1, 1) rotate(0deg);
+                    }
+                    .stickIconTop {
+                        transform: scale(-1, 1) rotate(0deg) translate(0px, 0px);
+                        opacity: 1;
+                    }
+                }
             }
         }
     }

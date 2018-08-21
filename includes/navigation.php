@@ -2,19 +2,27 @@
     <div class="header__holder">
         <div class="header__holder__leftBlock">
             <ul class="header__holder__leftBlock__listholder">
-                <li id="hoverItemList" class="header__holder__leftBlock__listholder--item hoverItem"><a href="">ABOUT</a></li>
-                <li class="header__holder__leftBlock__listholder--item hoverItem"><a href="">NEWS</a></li>
-                <li class="header__holder__leftBlock__listholder--item hoverItem"><a href="">EVENTS</a></li>
+                <li id="hoverItemList" class="header__holder__leftBlock__listholder--item hoverItem"><a href="about.php">ABOUT</a></li>
+                <li class="header__holder__leftBlock__listholder--item hoverItem"><a href="news.php">NEWS</a></li>
+                <li class="header__holder__leftBlock__listholder--item hoverItem"><a href="event.php">EVENTS</a></li>
             </ul>
         </div>
         <div class="header__holder__centerBlock">
-            <a href="#" class="header__holder__centerBlock--logo"><img src="assets/images/logo.svg"></a>
+            <a href="/ehba" class="header__holder__centerBlock--logo"><img src="assets/images/logo.svg"></a>
         </div>
         <div class="header__holder__rightBlock">
-            <a class="header__holder__rightBlock--link hoverItem" href=""><span class="name">SUPPORT</span></a>
+            <a class="header__holder__rightBlock--link hoverItem" href="support.php"><span class="name">SUPPORT</span></a>
             <a class="header__holder__rightBlock--link hoverItem" href=""><span class="name">DONATE</span></a>
             <div class="header__holder__rightBlock--menuToggle" id="navToggle">
-                <img src="assets/images/menu.svg">
+<!--                <img src="assets/images/menu.svg">-->
+                <div class="firstIcon">
+                    <img class="stickIcon" src="assets/images/MenuIcon.svg">
+                    <img class="stickIconTop" src="assets/images/MenuIconTop.svg">
+                </div>
+                <div class="secondIcon">
+                    <img class="stickIcon" src="assets/images/MenuIcon.svg">
+                    <img class="stickIconTop" src="assets/images/MenuIconTop.svg">
+                </div>
             </div>
         </div>
     </div>
