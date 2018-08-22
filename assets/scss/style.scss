@@ -2614,6 +2614,46 @@ body {
     height: 100%;
     min-height: calc(100vh - 221px);
 	padding: 154px 0 122px;
+    &__holder {
+        width: 100%;
+        display: flex;
+        &__navbarBlock {
+            width: 23.263%;
+            padding-left: 45px;
+            padding-right: 51px;
+            padding-top: 26px;
+            
+        }
+        &__contentBlock {
+            width: 76.737%;
+            padding-right: 9.375%;
+            padding-bottom: 56px;
+            .title {
+                font-family: $fname;
+                font-size: 40px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: 1.9px;
+                text-align: left;
+                color: #ffffff;
+                margin-bottom: 54px;
+            }
+            &--inner {
+                width: 100%;
+                .drillsHolder {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    &__block {
+                        width: 50%;
+                        
+                    }
+                }
+            }
+        }
+    }
 }
 
 // support navbar

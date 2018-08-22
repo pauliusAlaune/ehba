@@ -94,23 +94,33 @@ $(document).ready(function() {
     // about navbar
     const about = document.querySelector('.aboutSection');
     if(about){
+        activeLocalFile('./aboutInnerContent/', 'aboutNavbar');
+    }
+    
+    const support = document.querySelector('.supportSection');
+    if(support){
+        activeLocalFile('./supportInnerContent/', 'supportNavbar');
+    }
+    
+    // active local file 
+    function activeLocalFile(localPlace, navId){
         let activeLiId = document.querySelector('.navbarListHolder__item.active').id;
-        let activeIdName = './aboutInnerContent/' + activeLiId + '.php';
+        let activeIdName = localPlace + activeLiId + '.php';
         getText(activeIdName);    
 
-        let ul = document.getElementById('aboutNavbar');
+        let ul = document.getElementById(navId);
 
         ul.addEventListener('click', function(e) {
             if (e.target.tagName === 'LI'){
                 let activeLi = document.querySelector('.navbarListHolder__item.active');
-                let idName = './aboutInnerContent/' + e.target.id + '.php';
+                let idName = localPlace + e.target.id + '.php';
                 getText(idName);
                 activeLi.classList.remove('active');
                 e.target.classList.add('active');
             }
         });
     }
-
+    
     // get local file
     function getText(name){
         fetch(name)
