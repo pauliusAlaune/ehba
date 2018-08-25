@@ -2640,6 +2640,18 @@ body {
                 color: #ffffff;
                 margin-bottom: 54px;
             }
+            .subTitle {
+                font-family: $fname;
+                font-size: 28px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: 1.7px;
+                text-align: left;
+                color: #ffffff;
+                margin-bottom: 40px;
+            }
             &--inner {
                 width: 100%;
                 .drillsHolder {
@@ -2737,17 +2749,22 @@ body {
                     width: 100%;
                     display: flex;
                     flex-direction: column;
+                    height: 700px;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
                     &__block {
                         width: 100%;
-                        padding: 0 10%;
                         position: relative;
-                        padding-top: 30px;
-                        .deco {
+                        padding-top: 209px;
+                    &:first-child {
+                        padding-top: 0;
+                    }
+                        .introDeco {
                             width: 95px;
                             height: 6px;
                             background-color: #ee5744;
                             position: absolute;
-                            top: 0;
+                            top: 0%;
                             left: 10%;
                         }
                         .blockNumber {
@@ -2766,7 +2783,7 @@ body {
                             top: 0;
                             right: 15%;
                         }
-                        &__titleHolder {
+                        .titleHolder {
                             position: absolute;
                             top: 35px;
                             left: 0;
@@ -2785,8 +2802,8 @@ body {
                             }
                         }
                         .textblock {
-                            width: 50%;
-                            margin-bottom: 110px;
+                            margin: 30px 10% 110px;
+                            position: relative;
                             .para {
                                 font-family: $fname;
                                 font-size: 16px;
@@ -2807,6 +2824,8 @@ body {
                             height: 256px;
                             width: 100%;
                             position: relative;
+                            margin:  0 10%;
+                            padding-right: 20%;
                             .imgBlockNumber {
                                 font-family: $fname;
                                 font-size: 81px;
@@ -2829,7 +2848,150 @@ body {
                                 background-size: cover;
                             }
                         }
+                        .doubleBlock {
+                            display: flex;
+                            flex-wrap: wrap;
+                            &__inner {
+                                width: 50%;
+                                position: relative;
+                                &:nth-child(odd){
+                                    padding-right: 63px;
+                                }
+                                &:nth-child(even){
+                                    padding-left: 63px;
+                                }
+                                .titleHolder {
+                                    position: absolute;
+                                    top: 30px;
+                                    left: 0;
+                                    .title {
+                                        transform: rotate(180deg);
+                                        font-family: $fname;
+                                        font-size: 46px;
+                                        font-weight: bold;
+                                        font-style: normal;
+                                        font-stretch: normal;
+                                        line-height: .8;
+                                        letter-spacing: normal;
+                                        text-align: left;
+                                        color: #ee5744;
+                                        writing-mode: vertical-rl;
+                                    }
+                                }
+                                .deco {
+                                    width: 95px;
+                                    height: 6px;
+                                    background-color: #ee5744;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 24%;
+                                }
+                                .deco.zeroLeft {
+                                    left: 0;
+                                }
+                                .blockNumber {
+                                    font-family: $fname;
+                                    font-size: 500px;
+                                    font-weight: normal;
+                                    font-style: normal;
+                                    font-stretch: normal;
+                                    line-height: normal;
+                                    line-height: .6;
+                                    letter-spacing: normal;
+                                    text-align: left;
+                                    color: #d8d8d8;
+                                    opacity: 0.03;
+                                    position: absolute;
+                                    top: -30%;
+                                    right: 0;
+                                }
+                                .blockNumber.moreRight {
+                                    right: -26%;
+                                    top: -35%;
+                                }
+                                .padLeft {
+                                    padding-left: 25%;
+                                }
+                                .padRightPx {
+                                    padding-right: 25px;
+                                }
+                                &__textblock {
+                                    position: relative;
+                                    padding-top: 30px;
+                                    .para {
+                                        font-family: $fname;
+                                        font-size: 16px;
+                                        font-weight: normal;
+                                        font-style: normal;
+                                        font-stretch: normal;
+                                        line-height: 1.63;
+                                        letter-spacing: 1.1px;
+                                        text-align: left;
+                                        color: #ffffff;
+                                        margin-bottom: 30px;
+                                        &:last-child {
+                                            margin-bottom: 0px;
+                                        }
+                                    }
+                                }
+                                &__imgBlock {
+                                    position: relative;
+                                    width: 100%;
+                                    height: 398px;
+                                    &--imgBlockNumber {
+                                        font-family: $fname;
+                                        font-size: 81px;
+                                        font-weight: normal;
+                                        font-style: normal;
+                                        font-stretch: normal;
+                                        line-height: 0.8;
+                                        letter-spacing: normal;
+                                        text-align: left;
+                                        color: #ee5744;
+                                        position: absolute;
+                                        top: -10%;
+                                        left: 5%;
+                                    }
+                                    .doubleBlock__inner__imgBlock--imgBlockNumber.rightSide {
+                                        right: 5%;
+                                        left: unset;
+                                    }
+                                    &--img {
+                                        width: 100%;
+                                        height: 100%;
+                                        background-position: center;
+                                        background-repeat: no-repeat;
+                                        background-size: cover;
+                                    }
+                                }
+                            }
+                        }
                     }
+                }
+                .guideHolder::-webkit-scrollbar {
+                    background-color: transparent;
+                    width: 7px;
+                    &::after {
+                        height: 100%;
+                        width: 1px;
+                        content: '';
+                        background: #ee5744; 
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                    }
+                }
+                .guideHolder::-webkit-scrollbar-thumb {
+                    background: #ee5744; 
+                    width: 7px;
+                    height: 145px;
+                }                
+                .guideHolder::-webkit-scrollbar-track-piece {
+                    background: transparent; 
+                    width: 1px;
+                    height: 100%;
+                    border-right: 1px solid #ee5744;
                 }
             }
         }
