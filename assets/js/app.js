@@ -68,8 +68,6 @@ $(document).ready(function() {
                 setTimeout(function(){
                     $('.dropClick.active').children('.dropdown__list').slideDown('slow');
                     $('.dropClick.active').children('.dropdown__list').addClass('open');
-                    console.log($('.dropClick.active'));
-                    console.log($('.dropClick.active').children('.dropdown__list'));
                 }, 700);
             }
             $('.dropdown__list--item').removeClass('active');
@@ -80,15 +78,60 @@ $(document).ready(function() {
         }
     });
 
-    $('.dropdown__list--item').click(function(e){
-        e.stopPropagation();
-        if($(this).hasClass("active")){
-           
+//    $('.dropdown__list--item').click(function(e){
+//        e.stopPropagation();
+//        if($(this).hasClass("active")){
+//           
+//        } else {
+//            $('.dropdown__list--item').removeClass('active');
+//            $(this).addClass('active');  
+//        }
+//    });
+    
+    $(document).on('click', '.drillshideBlockToggle', function(e){
+        e.preventDefault();
+        if($(this).hasClass('active')){
+            scrollStop()
+            $('.drillshideBlockToggle').removeClass('active');
+            $('.drillshideBlockToggle').prev().slideUp("slow");
+            $('.drillshideBlockToggle').prev().removeClass('open');
+            console.log('active');
         } else {
-            $('.dropdown__list--item').removeClass('active');
-            $(this).addClass('active');  
+            scrollStop();
+            $('.drillshideBlockToggle').removeClass('active');
+            $('.drillshideBlockToggle').prev().slideUp("slow");
+            $('.drillshideBlockToggle').prev().removeClass('open');
+            $(this).prev().slideToggle('slow');
+            $(this).prev().toggleClass('open');
+            $(this).toggleClass('active'); 
+            console.log('no active');
+            if($(".drillshideBlockToggle").hasClass('active')) {
+              $("html, body").animate({
+                   scrollTop: $(".drillshideBlockToggle.active").parent().parent().offset().top - 30
+              }, 500);
+           }
         }
+
     });
+    
+    function scrollStop(){
+        var v = 0;  
+        var bd = $('body').get(0);
+        $('.infoBlockName').not(this).next().slideUp({easing: "linear", step: function(now, tween) {
+            if(tween.prop == "height"){
+                if(v == 0){
+                    v = now;
+                }else{
+                    var k = v - now;
+                    bd.scrollTop -= k;
+                    v = now;
+                }
+            }
+        }, duration: 400, complete: function() { 
+
+        }
+        });
+    }
     
     
     // about navbar

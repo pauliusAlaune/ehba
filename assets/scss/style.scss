@@ -2646,9 +2646,91 @@ body {
                     width: 100%;
                     display: flex;
                     flex-wrap: wrap;
-                    &__block {
+                    &__leftBlock {
+                        padding-right: 15px;
+                    }
+                    &__rightBlock {
+                        padding-left: 15px;
+                    }
+                    &__leftBlock,
+                    &__rightBlock {
                         width: 50%;
-                        
+                        .inner {
+                            width: 100%;
+                            background-color: #0f1234;
+                            margin-bottom: 30px;
+                            border-radius: 10px;
+                            &--imgHolder {
+                                width: 100%;
+                                height: 247px;
+                                position: relative;
+                                overflow: hidden;
+                                border-radius: 10px 10px 0 0;
+                                .imgBlock {
+                                    background-position: center;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            &--textHolder {
+                                width: 100%;
+                                padding: 34px;
+                                .title {
+                                    font-family: $fname;
+                                    font-size: 16px;
+                                    font-weight: normal;
+                                    font-style: normal;
+                                    font-stretch: normal;
+                                    line-height: 1.5;
+                                    letter-spacing: 0.6px;
+                                    text-align: left;
+                                    color: #ee5744;
+                                    margin-bottom: 30px;
+                                }
+                                .introPara {
+                                    font-family: $fname;
+                                    font-size: 16px;
+                                    font-weight: normal;
+                                    font-style: normal;
+                                    font-stretch: normal;
+                                    line-height: 1.5;
+                                    letter-spacing: 0.6px;
+                                    text-align: left;
+                                    color: #ffffff; 
+                                    margin-bottom: 30px;
+                                }
+                                .hideBlock {
+                                    display: none;
+                                    .para {
+                                        font-family: $fname;
+                                        font-size: 16px;
+                                        font-weight: normal;
+                                        font-style: normal;
+                                        font-stretch: normal;
+                                        line-height: 1.5;
+                                        letter-spacing: 0.6px;
+                                        text-align: left;
+                                        color: #ffffff;
+                                        margin-bottom: 30px;
+                                    }
+                                }
+                                .drillshideBlockToggle {
+                                    cursor: pointer;
+                                    background-image: url('../images/triangle-2.svg');
+                                    background-repeat: no-repeat;
+                                    width: 26px;
+                                    height: 17px;
+                                    margin: 30px auto 0;
+                                    transform: rotate(0deg);
+                                    transition: all 0.5s ease;
+                                }
+                                .drillshideBlockToggle.active {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
                     }
                 }
             }

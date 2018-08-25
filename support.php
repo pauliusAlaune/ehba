@@ -17,10 +17,7 @@
         <div class="supportSection__holder__contentBlock">
             <h1 class="title">SUPPORT</h1>
             <div id="output" class="supportSection__holder__contentBlock--inner">
-                <div class="drillsHolder">
-                    <div class="drillsHolder__block"></div>
-                    <div class="drillsHolder__block"></div>
-                </div>
+
             </div>
         </div>
     </div>
