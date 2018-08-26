@@ -2523,12 +2523,19 @@ body {
             padding-left: 45px;
             padding-right: 51px;
             padding-top: 26px;
-            
+            @include responsive(1024px)
+            {
+                width: 35%;
+            }
         }
         &__contentBlock {
             width: 76.737%;
             padding-right: 9.375%;
             padding-bottom: 56px;
+            @include responsive(1024px)
+            {
+                width: 65%;
+            }
             .title {
                 font-family: $fname;
                 font-size: 40px;
@@ -2748,6 +2755,11 @@ body {
                             {
                                 height: 325px;
                             }
+                            @include responsive(1024px)
+                            {
+                                width: 48%;
+                                height: 225px;
+                            }
                             &:hover {
                                 .teamMemberWrapper__holder__block--info {
                                     transform: translateY(0%);
@@ -2787,6 +2799,11 @@ body {
                                         text-align: center;
                                         color: #ffffff;
                                         margin-bottom: 9px;
+                                        @include responsive(1024px)
+                                        {
+                                            font-size: 18px;
+                                            margin-bottom: 0px;
+                                        }
                                     }
                                     .position {
                                         font-family: $fname;
@@ -2810,7 +2827,19 @@ body {
                                         letter-spacing: 1.4px;
                                         text-align: center;
                                         color: #ffffff;
+                                        @include responsive(1024px)
+                                        {
+                                            font-size: 14px;
+                                        }
                                     }
+                                }
+                            }
+                        }
+                        .teamMemberWrapper__holder__block.active {
+                            .teamMemberWrapper__holder__block--info {
+                                transform: translateY(0%);
+                                .inner {
+                                    transform: translateY(40%);
                                 }
                             }
                         }

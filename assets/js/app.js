@@ -95,7 +95,6 @@ $(document).ready(function() {
             $('.drillshideBlockToggle').removeClass('active');
             $('.drillshideBlockToggle').prev().slideUp("slow");
             $('.drillshideBlockToggle').prev().removeClass('open');
-            console.log('active');
         } else {
             scrollStop();
             $('.drillshideBlockToggle').removeClass('active');
@@ -104,7 +103,6 @@ $(document).ready(function() {
             $(this).prev().slideToggle('slow');
             $(this).prev().toggleClass('open');
             $(this).toggleClass('active'); 
-            console.log('no active');
             if($(".drillshideBlockToggle").hasClass('active')) {
               $("html, body").animate({
                    scrollTop: $(".drillshideBlockToggle.active").parent().parent().offset().top - 30
@@ -113,26 +111,6 @@ $(document).ready(function() {
         }
 
     });
-    
-    function scrollStop(){
-        var v = 0;  
-        var bd = $('body').get(0);
-        $('.infoBlockName').not(this).next().slideUp({easing: "linear", step: function(now, tween) {
-            if(tween.prop == "height"){
-                if(v == 0){
-                    v = now;
-                }else{
-                    var k = v - now;
-                    bd.scrollTop -= k;
-                    v = now;
-                }
-            }
-        }, duration: 400, complete: function() { 
-
-        }
-        });
-    }
-    
     
     // about navbar
     const about = document.querySelector('.aboutSection');
@@ -190,6 +168,7 @@ $(document).ready(function() {
             $(".openBtn").next().removeClass("open");
             $(".openBtn").next().slideUp("slow");
             $(".openBtn").removeClass("active");
+            scrollStop();
         } else {
             $(".openBtn").next().removeClass("open");
             $(".openBtn").next().slideUp("slow");
@@ -197,6 +176,12 @@ $(document).ready(function() {
             $(this).next().slideToggle("slow");
             $(this).next().toggleClass("open");
             $(this).toggleClass("active");
+            scrollStop();
+            if($(".openBtn").hasClass('active')) {
+              $("html, body").animate({
+                   scrollTop: $(".openBtn.active").parent().parent().offset().top - 30
+              }, 500);
+           }
         }
     });
     
@@ -214,7 +199,24 @@ $(document).ready(function() {
           $('#datepicker').datepicker('show');
     });
 
-    
+    function scrollStop(){
+        var v = 0;  
+        var bd = $('body').get(0);
+        $('.infoBlockName').not(this).next().slideUp({easing: "linear", step: function(now, tween) {
+            if(tween.prop == "height"){
+                if(v == 0){
+                    v = now;
+                }else{
+                    var k = v - now;
+                    bd.scrollTop -= k;
+                    v = now;
+                }
+            }
+        }, duration: 400, complete: function() { 
+
+        }
+        });
+    }
 //    $( function() {
 //        $( "#datepicker" ).datepicker();
 //    });
