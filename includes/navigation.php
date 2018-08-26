@@ -49,7 +49,7 @@
             <div class="menuBlock">
                 <p class="menuBlock--name">ABOUT</p>
                 <ul class="menuBlock__listHolder">
-                    <li class="menuBlock__listHolder--item"><a href="">History of Bike Polo</a></li>
+                    <li class="menuBlock__listHolder--item"><a href="about.php/?#1">History of Bike Polo</a></li>
                     <li class="menuBlock__listHolder--item"><a href="">Funding</a></li>
                     <li class="menuBlock__listHolder--item"><a href="">Board</a></li>
                     <li class="menuBlock__listHolder--item"><a href="">System</a></li>
